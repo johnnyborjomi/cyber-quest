@@ -1,0 +1,46 @@
+
+
+
+
+
+@mixin helper-ui-clearfix {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin helper-breakpoint($min-bp, $max-bp: null) {
+    $edges-min: map-get($setting-breakpoints, $min-bp);
+    $edge-min: helper-breakpoint-edge-min($edges-min);
+
+    @if $max-bp == null {
+        @include helper-breakpoint-media-min($edge-min) {
+            @content;
+        }
+    } @else {
+        $edges-max: map-get($setting-breakpoints, $max-bp);
+        $edge-max: helper-breakpoint-edge-max($edges-max);
+
+        @if $edge-max == null {
+            @include helper-breakpoint-media-min($edge-min) {
+                @content;
+            }
+        } @else {
+            @include helper-breakpoint-media-between($edge-min, $edge-max) {
+                @content;
+            }
+        }
+    }
+}
+
+@mixin helper-breakpoint-media-min($min: 0) {
+    @media only screen and (min-width: $min) {
+        @content;
+    }
+}
+
+@function helper-grid-span($column, $columns: $setting-grid-columns) {
+    @return (100% / $columns) * $column;
+}

@@ -1,0 +1,106 @@
+
+
+$setting-font-size: (
+    1: 38px,
+    2: 34px,
+    3: 30px,
+    4: 26px,
+    5: 22px,
+    6: 18px,
+    big: 16px,
+    default: 14px,
+    small: 12px
+) !default;
+
+$setting-font-weight: (
+    light: 300,
+    regular: 400,
+    bold: 900
+) !default;
+
+$setting-font-line-height: (
+    1: 1.1,
+    2: 1.2,
+    3: 1.4,
+    4: 1.4,
+    5: 1.4,
+    6: 1.4,
+    default: 1.5,
+    tight: 1.1
+) !default;
+
+@mixin helper-font-size($size) {
+    font-size: map-get($setting-font-size, $size);
+}
+
+@mixin helper-font-weight($weight) {
+    font-weight: map-get($setting-font-weight, $weight);
+}
+
+@mixin helper-font-line-height($height) {
+    line-height: map-get($setting-font-line-height, $height);
+}
+
+@mixin basic-typography() {
+    html {
+        font-size: $setting-font-size-base;
+    }
+
+    body {
+        @include helper-font-size(default);
+        @include helper-font-weight(regular);
+        @include helper-font-line-height(default);
+        position: relative;
+        background-color: $setting-color-bg;
+        color: $setting-color-text;
+        font-family: $setting-font-family;
+    }
+
+    @each $i in (1, 2, 3, 4, 5, 6) {
+        h#{$i} {
+            @include helper-font-size($i);
+            @include helper-font-line-height($i);
+            display: block;
+        }
+    }
+
+    a {
+        color: $setting-color-main;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    b,
+    strong {
+        @include helper-font-weight(bold);
+    }
+
+    i,
+    em,
+    cite {
+        font-style: italic;
+    }
+
+    hr {
+        @include helper-ui-clearfix;
+        border-bottom: 1px solid $setting-color-lighter;
+        margin: 0.5rem 0;
+    }
+
+    small {
+        @include helper-font-size(small);
+    }
+
+    big {
+        @include helper-font-size(big);
+    }
+
+    p,
+    blockquote {
+        margin: 0.5rem 0;
+    }
+}
+@include basic-typography();

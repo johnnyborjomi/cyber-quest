@@ -1,0 +1,21 @@
+
+$setting-font-family: 'Arial', sans-serif !default;
+$setting-font-size-base: 16px !default;
+
+$setting-color-body: #fff;
+$setting-color-text: #000;
+$setting-color-bg: #0a1f38;
+$setting-color-main:#225290;
+
+$setting-color-lighter: #ccc;
+
+$setting-grid-max-width: 1160px !default;
+$setting-grid-gutter: 0 !default;
+$setting-grid-columns: 12 !default;
+$setting-fullscreen-min-height: 600px;
+$setting-breakpoints: (
+    sm: (0, 549px),
+    md: (550px, 769px),
+    lg: (770px, 969px),
+    xl: (970px)
+) !default;
