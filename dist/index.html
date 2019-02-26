@@ -7,12 +7,52 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Home page</title>
-    <link href="styles.css" rel="stylesheet">
-</head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet">
+<link href="styles.css" rel="stylesheet"></head>
 
 <body>
-    home page
-    <script type="text/javascript" src="public.js"></script>
-</body>
+    <div class="wrapper home-page">
 
+        <header class="header container container--spaced">
+            <div class="grid grid--middle grid--justify">
+                <div class="col header__logo">
+                    <img src="assets/logo.jpg" alt="Cyber Quest" title="Cyber Quest">
+                </div>
+                <div class="col social-links">
+                    <div class="grid">
+                        <a href="https://www.facebook.com"><img src="assets/facebook-white.svg" alt="Facebook"></a>
+                        <a href="https://www.twitter.com"><img src="assets/twitter-white.svg" alt="Twitter"></a>
+                        <a href="https://www.instagram.com"><img src="assets/instagram-white.svg" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="container container--fullscreen section--white jumbotron">
+            <div class="video-bg">
+                <video width="100%" height="auto" preload="auto" autoplay="autoplay"
+                       loop="loop">
+                    <source src="assets/preview.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="container container--spaced jumbotron__content">
+                <div class="grid grid--justify grid--middle">
+                    <div class="col">
+                        <span>2019</span>
+                        <h1>Welcome to <br/> Cyber Quest</h1>
+                        <p>A cyber security competition and training <br> for students across the UAE. Play your <br> part in defending the nation.</p>
+                        <a href="#" class="button button--primary">Sign Up</a>
+                    </div>
+                    <div class="col">
+                        <iframe src="https://fast.wistia.net/embed/iframe/i3k6hkfq35" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container section--white container--spaced">
+            <p>Cyber Quest is an integrated training event and hacking competition provided by Signals Intelligence Agency to raise awareness and identify the next generation of Cyber Security Experts. Take part and discover more than you imagine about networking, cyber security and what really happens online. Join the Quest now to draw back the curtain on the 21st century’s digital battleground.</p>
+        </section>
+    </div>
+<script type="text/javascript" src="public.js"></script></body>
 </html>
+

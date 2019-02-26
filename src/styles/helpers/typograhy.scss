@@ -1,34 +1,5 @@
 
 
-$setting-font-size: (
-    1: 38px,
-    2: 34px,
-    3: 30px,
-    4: 26px,
-    5: 22px,
-    6: 18px,
-    big: 16px,
-    default: 14px,
-    small: 12px
-) !default;
-
-$setting-font-weight: (
-    light: 300,
-    regular: 400,
-    bold: 900
-) !default;
-
-$setting-font-line-height: (
-    1: 1.1,
-    2: 1.2,
-    3: 1.4,
-    4: 1.4,
-    5: 1.4,
-    6: 1.4,
-    default: 1.5,
-    tight: 1.1
-) !default;
-
 @mixin helper-font-size($size) {
     font-size: map-get($setting-font-size, $size);
 }
@@ -51,7 +22,7 @@ $setting-font-line-height: (
         @include helper-font-weight(regular);
         @include helper-font-line-height(default);
         position: relative;
-        background-color: $setting-color-bg;
+        background-color: $setting-color-body;
         color: $setting-color-text;
         font-family: $setting-font-family;
     }
@@ -101,6 +72,20 @@ $setting-font-line-height: (
     p,
     blockquote {
         margin: 0.5rem 0;
+    }
+
+    .text {
+        &--sm {
+            font-size: 24px;
+        }
+
+        &--md {
+            font-size: 40px;
+        }
+
+        &--center {
+            text-align: center;
+        }
     }
 }
 @include basic-typography();

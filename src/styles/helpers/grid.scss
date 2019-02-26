@@ -10,6 +10,12 @@
         &--fullscreen {
             height: 100vh;
             min-height: $setting-fullscreen-min-height;
+            max-width: 100vw;
+        }
+
+        &--spaced {
+            padding: 0 $setting-grid-padding;
+            max-width: $setting-grid-max-width + $setting-grid-padding*2;
         }
     }
 
@@ -141,6 +147,10 @@
         &--with-gutter {
             padding: 0 $setting-grid-gutter;
         }
+    }
+
+    .clearfix {
+        @include helper-ui-clearfix();
     }
 }
 @include basic-grid();

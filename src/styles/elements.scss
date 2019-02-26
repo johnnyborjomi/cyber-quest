@@ -1,0 +1,48 @@
+.wrapper {
+    position: relative;
+}
+
+.social-links {
+    a {
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        margin: 0 30px;
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        img {
+            path, svg {
+                fill: white;
+            }
+        }
+    }
+}
+
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 20px 70px;
+    color: #fff;
+    font-size: 30px;
+    margin: 24px 0;
+    &--primary {
+        background: #116ecb;
+        background: linear-gradient(to right, #116ecb 0%,#0c5195 100%);
+    }
+}
+
+.section {
+    &--white {
+        color: white;
+        background: $setting-color-bg;
+    }
+}

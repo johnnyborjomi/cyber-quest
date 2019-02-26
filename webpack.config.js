@@ -30,8 +30,8 @@ const config = {
     new ExtractTextPlugin("styles.css"),
     new HtmlWebpackPlugin({
       template: "./src/index.html"
-    })
-    // new CopyWebpackPlugin([{ from: "src/assets/", to: "assets" }])
+    }),
+    new CopyWebpackPlugin([{ from: "src/styles/assets/", to: "assets" }])
   ]
 };
 

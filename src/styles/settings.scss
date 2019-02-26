@@ -1,5 +1,23 @@
 
-$setting-font-family: 'Arial', sans-serif !default;
+//@font-face {
+//    font-family: Roboto;
+//    src: url('assets/fonts/RobotoMono-Regular.ttf') format('truetype');
+//    font-weight: normal;
+//    font-style: normal;
+//}
+//
+//@font-face {
+//    font-family: Roboto;
+//    src: url('assets/fonts/RobotoMono-Bold.ttf') format('truetype');
+//    font-weight: bold;
+//    font-style: normal;
+//}
+
+@font-face {
+
+}
+
+$setting-font-family: 'Roboto Mono','Arial', sans-serif !default;
 $setting-font-size-base: 16px !default;
 
 $setting-color-body: #fff;
@@ -9,13 +27,43 @@ $setting-color-main:#225290;
 
 $setting-color-lighter: #ccc;
 
-$setting-grid-max-width: 1160px !default;
+$setting-grid-max-width: 1690px !default;
+$setting-grid-padding: 50px;
 $setting-grid-gutter: 0 !default;
 $setting-grid-columns: 12 !default;
 $setting-fullscreen-min-height: 600px;
 $setting-breakpoints: (
     sm: (0, 549px),
-    md: (550px, 769px),
-    lg: (770px, 969px),
-    xl: (970px)
+    md: (550px, 979px),
+    lg: (980px, 1169px),
+    xl: (1170px)
+) !default;
+
+$setting-font-size: (
+        1: 90px,
+        2: 34px,
+        3: 30px,
+        4: 26px,
+        5: 22px,
+        6: 18px,
+        big: 24px,
+        default: 20px,
+        small: 18px
+) !default;
+
+$setting-font-weight: (
+        light: 300,
+        regular: 400,
+        bold: 900
+) !default;
+
+$setting-font-line-height: (
+        1: 1.1,
+        2: 1.2,
+        3: 1.4,
+        4: 1.4,
+        5: 1.4,
+        6: 1.4,
+        default: 1.5,
+        tight: 1.1
 ) !default;
