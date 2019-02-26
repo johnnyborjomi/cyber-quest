@@ -12,23 +12,24 @@
 
 <body>
     <div class="wrapper home-page">
-
-        <header class="header container container--spaced">
-            <div class="grid grid--middle grid--justify">
-                <div class="col header__logo">
-                    <img src="assets/logo.jpg" alt="Cyber Quest" title="Cyber Quest">
-                </div>
-                <div class="col social-links">
-                    <div class="grid">
-                        <a href="https://www.facebook.com"><img src="assets/facebook-white.svg" alt="Facebook"></a>
-                        <a href="https://www.twitter.com"><img src="assets/twitter-white.svg" alt="Twitter"></a>
-                        <a href="https://www.instagram.com"><img src="assets/instagram-white.svg" alt="Instagram"></a>
+        <header class="header">
+            <div class="container container--spaced header__container">
+                <div class="grid grid--middle grid--justify">
+                    <div class="col header__logo">
+                        <img src="assets/logo.jpg" alt="Cyber Quest" title="Cyber Quest">
+                    </div>
+                    <div class="col social-links">
+                        <div class="grid">
+                            <a href="https://www.facebook.com"><img src="assets/facebook-white.svg" alt="Facebook"></a>
+                            <a href="https://www.twitter.com"><img src="assets/twitter-white.svg" alt="Twitter"></a>
+                            <a href="https://www.instagram.com"><img src="assets/instagram-white.svg" alt="Instagram"></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </header>
 
-        <section class="container container--fullscreen section--white jumbotron">
+        <section class="container container--fullscreen section--white jumbotron clearfix">
             <div class="video-bg">
                 <video width="100%" height="auto" preload="auto" autoplay="autoplay"
                        loop="loop">
@@ -49,8 +50,14 @@
                 </div>
             </div>
         </section>
-        <section class="container section--white container--spaced">
-            <p>Cyber Quest is an integrated training event and hacking competition provided by Signals Intelligence Agency to raise awareness and identify the next generation of Cyber Security Experts. Take part and discover more than you imagine about networking, cyber security and what really happens online. Join the Quest now to draw back the curtain on the 21st century’s digital battleground.</p>
+        <section class="container--fullscreen grid grid--middle section--white">
+            <div class="container container--spaced">
+                <div class="grid grid--center">
+                    <p class="text--md text--center">Cyber Quest is an integrated training event and hacking competition provided by Signals Intelligence Agency to raise awareness and identify the next generation of Cyber Security Experts. Take part and discover more than you imagine about networking, cyber security and what really happens online. Join the Quest now to draw back the curtain on the 21st century’s digital battleground.</p>
+                    <a href="#" class="button button--primary">Apply Now</a>
+                </div>
+
+            </div>
         </section>
     </div>
 <script type="text/javascript" src="public.js"></script></body>

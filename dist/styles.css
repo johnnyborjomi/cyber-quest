@@ -62,7 +62,7 @@ html {
   font-size: 16px; }
 
 body {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 400;
   line-height: 1.5;
   position: relative;
@@ -124,14 +124,23 @@ hr {
     clear: both; }
 
 small {
-  font-size: 12px; }
+  font-size: 18px; }
 
 big {
-  font-size: 16px; }
+  font-size: 24px; }
 
 p,
 blockquote {
   margin: 0.5rem 0; }
+
+.text--sm {
+  font-size: 24px; }
+
+.text--md {
+  font-size: 40px; }
+
+.text--center {
+  text-align: center; }
 
 .container {
   display: block;
@@ -371,6 +380,11 @@ blockquote {
   .col--with-gutter {
     padding: 0 0; }
 
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both; }
+
 .wrapper {
   position: relative; }
 
@@ -406,20 +420,24 @@ blockquote {
   background: #0a1f38; }
 
 .header {
-  position: relative;
   z-index: 10;
-  padding: 80px 100px; }
+  position: absolute;
+  width: 100%;
+  top: 0; }
+  .header__container {
+    padding-top: 80px;
+    padding-bottom: 80px; }
   .header__logo {
     width: 300px; }
 
 .jumbotron {
-  position: absolute;
-  top: 0;
   display: flex;
   align-items: center;
   min-height: 1000px;
   overflow-y: hidden;
-  border-bottom: 12px solid #fff; }
+  border-bottom: 12px solid #fff;
+  padding-top: 250px;
+  position: relative; }
   .jumbotron__content {
     z-index: 10; }
     .jumbotron__content h1 {
