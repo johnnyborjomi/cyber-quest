@@ -88,11 +88,14 @@
         &.container {
             max-width: $setting-grid-max-width;
         }
+
+        &--column {
+            flex-direction: column;
+        }
     }
 
     .col {
         @include helper-ui-clearfix;
-        float: left;
         display: block;
         flex-grow: 0;
         flex-basis: auto;

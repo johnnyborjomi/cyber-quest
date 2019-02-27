@@ -21,14 +21,15 @@ $setting-font-family: 'Roboto Mono','Arial', sans-serif !default;
 $setting-font-size-base: 16px !default;
 
 $setting-color-body: #fff;
-$setting-color-text: #000;
+$setting-color-text: #272727;
 $setting-color-bg: #0a1f38;
 $setting-color-main:#225290;
 
+
 $setting-color-lighter: #ccc;
 
-$setting-grid-max-width: 1690px !default;
-$setting-grid-padding: 50px;
+$setting-grid-max-width: 1280px !default;
+$setting-grid-padding: 40px;
 $setting-grid-gutter: 0 !default;
 $setting-grid-columns: 12 !default;
 $setting-fullscreen-min-height: 600px;
@@ -40,8 +41,8 @@ $setting-breakpoints: (
 ) !default;
 
 $setting-font-size: (
-        1: 90px,
-        2: 34px,
+        1: 60px,
+        2: 50px,
         3: 30px,
         4: 26px,
         5: 22px,
