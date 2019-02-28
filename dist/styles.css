@@ -437,6 +437,18 @@ blockquote {
     background: #116ecb;
     background: linear-gradient(to right, #116ecb 0%, #0c5195 100%); }
 
+.scroll-icon {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  position: absolute; }
+  .scroll-icon__icon {
+    width: 16px;
+    height: 16px; }
+  .scroll-icon__text {
+    font-size: 10px;
+    margin-left: 10px; }
+
 .section--blue {
   color: white;
   background: #0a1f38;
@@ -456,12 +468,15 @@ blockquote {
 
 .tiles {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 568px; }
   .tiles .tile {
     background: rgba(0, 0, 0, 0.05);
     height: 254px;
     width: 254px;
-    margin: 15px; }
+    margin: 15px;
+    min-width: calc(50% - 30px); }
 
 .sign-up-text {
   line-height: 35px;
@@ -492,7 +507,7 @@ blockquote {
   display: flex;
   align-items: center;
   min-height: 900px;
-  overflow-y: hidden;
+  overflow: hidden;
   position: relative; }
   .jumbotron__content {
     z-index: 10; }
@@ -502,8 +517,6 @@ blockquote {
     .jumbotron__content iframe {
       width: 540px;
       height: 365px; }
-    .jumbotron__content span {
-      font-size: 16px; }
 
 .footer {
   padding: 10px 0; }
