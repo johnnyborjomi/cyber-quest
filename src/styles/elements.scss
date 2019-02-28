@@ -33,6 +33,21 @@
     }
 }
 
+.scroll-icon {
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    position: absolute;
+    &__icon {
+        width: 16px;
+        height: 16px;
+    }
+    &__text {
+        font-size: 10px;
+        margin-left: 10px;
+    }
+}
+
 .section {
     &--blue {
         color: white;
@@ -57,13 +72,14 @@
 .tiles {
     display: flex;
     flex-wrap: wrap;
-
+    justify-content: flex-end;
+    width: 568px;
     .tile {
         background: rgba(0,0,0,.05);
         height: 254px;
         width: 254px;
         margin: 15px;
-
+        min-width: calc(50% - 30px);
     }
 }
 
