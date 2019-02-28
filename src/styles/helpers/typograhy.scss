@@ -76,15 +76,51 @@
 
     .text {
         &--sm {
-            font-size: 24px;
+            font-size: 20px;
         }
 
         &--md {
-            font-size: 40px;
+            font-size: 24px;
+        }
+
+        &--xl {
+            font-size: 50px;
         }
 
         &--center {
             text-align: center;
+        }
+    }
+
+    .color {
+        &--main {
+            color: $setting-color-main;
+        }
+    }
+
+    .with-prefix {
+        padding-left: 30px;
+        position: relative;
+
+        &::before {
+            width: 20px;
+            height: 3px;
+            @include absolute-centred-y-elem();
+        }
+        &--black {
+            &::before {
+                background: #000;
+            }
+        }
+        &--main {
+            &::before {
+                background: $setting-color-main;
+            }
+        }
+        &--white {
+            &::before {
+                background: #fff;
+            }
         }
     }
 }
