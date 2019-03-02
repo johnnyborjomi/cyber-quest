@@ -7,12 +7,25 @@
         padding-top: 26px;
         padding-bottom: 26px;
         padding-left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include helper-breakpoint-media-max($setting-breakpoint-sm-max){
+            justify-content: center;
+        }
     }
     &__logo {
         width: 250px;
         img {
             display: block;
         }
+        @include helper-breakpoint-media-max($setting-breakpoint-sm-max){
+
+        }
     }
-    
+    &__links {
+        @include helper-breakpoint-media-max($setting-breakpoint-sm-max){
+            display: none;
+        }
+    }
 }

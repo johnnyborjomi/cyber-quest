@@ -2,6 +2,7 @@ const path = require("path");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const sassLoader = require('sass-loader');
 
 const config = {
   entry: "./src/index.js",
@@ -18,13 +19,15 @@ const config = {
     rules: [
       {
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract(["css-loader", "sass-loader"])
+        use: ExtractTextPlugin.extract(["css-loader", "sass-loader"]),
       }
       // { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
-    ]
+    ],
+
   },
+
   resolve: {
-    extensions: [".js", ".json"]
+    extensions: [".js", ".json"],
   },
   plugins: [
     new ExtractTextPlugin("styles.css"),

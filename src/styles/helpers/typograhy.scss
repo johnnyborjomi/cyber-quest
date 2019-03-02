@@ -15,6 +15,12 @@
 @mixin basic-typography() {
     html {
         font-size: $setting-font-size-base;
+        @include helper-breakpoint-media-max($setting-breakpoint-lg-max){
+            font-size: 16px;
+        }
+        @include helper-breakpoint-media-max($setting-breakpoint-sm-max){
+            font-size: 14px;
+        }
     }
 
     body {
@@ -38,6 +44,7 @@
     a {
         color: $setting-color-main;
         text-decoration: none;
+        font-size: 1rem;
 
         &:hover {
             text-decoration: underline;
@@ -72,6 +79,7 @@
     p,
     blockquote {
         margin: 0.5rem 0;
+        font-size: 1rem;
     }
 
     .text {
@@ -120,6 +128,13 @@
         &--white {
             &::before {
                 background: #fff;
+            }
+        }
+        &--mobile {
+            padding-left: 0;
+            text-align: center;
+            &:after {
+                display: none;
             }
         }
     }

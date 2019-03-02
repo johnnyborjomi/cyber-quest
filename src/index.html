@@ -14,16 +14,15 @@
     <div class="wrapper home-page">
         <header class="header">
             <div class="container container--spaced header__container">
-                <div class="grid grid--middle grid--justify">
-                    <div class="col header__logo">
-                        <img src="assets/logo-2x.png" alt="Cyber Quest" title="Cyber Quest">
-                    </div>
-                    <div class="col social-links">
-                        <div class="grid">
-                            <a href="https://www.facebook.com"><img src="assets/facebook-white.svg" alt="Facebook"></a>
-                            <a href="https://www.twitter.com"><img src="assets/twitter-white.svg" alt="Twitter"></a>
-                            <a href="https://www.instagram.com"><img src="assets/instagram-white.svg" alt="Instagram"></a>
-                        </div>
+                <div class="header__logo">
+                    <img src="assets/logo-2x.png" alt="Cyber Quest" title="Cyber Quest">
+                </div>
+
+                <div class="header__links social-links">
+                    <div class="grid">
+                        <a href="https://www.facebook.com"><img src="assets/facebook-white.svg" alt="Facebook"></a>
+                        <a href="https://www.twitter.com"><img src="assets/twitter-white.svg" alt="Twitter"></a>
+                        <a href="https://www.instagram.com"><img src="assets/instagram-white.svg" alt="Instagram"></a>
                     </div>
                 </div>
             </div>
@@ -31,47 +30,51 @@
 
         <section class="jumbotron container container--fullscreen section--blue clearfix">
             <div class="video-bg">
-                <video width="120%" height="auto" preload="auto" autoplay="autoplay"
+                <video muted preload="auto" autoplay="autoplay"
                        loop="loop">
                     <source src="assets/preview.mp4" type="video/mp4">
                 </video>
             </div>
+
             <div class="container container--spaced jumbotron__content">
-                <div class="grid grid--justify grid--middle">
-                    <div class="col">
-                        <span class="jumbotron__date with-prefix with-prefix--white">2019</span>
-                        <h1>Welcome to <br/> Cyber Quest</h1>
-                        <p>A cyber security competition and training <br> for students across the UAE. Play your <br> part in defending the nation.</p>
-                        <a href="#" class="button button--primary">Sign Up</a>
-                    </div>
-                    <div class="col">
-                        <iframe width="1206" height="636" src="https://www.youtube.com/embed/EzKImzjwGyM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
+
+                <div class="jumbotron__title">
+                    <span class="jumbotron__date with-prefix with-prefix--white">2019</span>
+                    <h1>Welcome to Cyber Quest</h1>
                 </div>
+                <div class="jumbotron__video">
+                    <iframe src="https://www.youtube.com/embed/EzKImzjwGyM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="jumbotron__text">
+                    <p>A cyber security competition and training for students across the UAE. Play your part in defending the nation.</p>
+                    <a href="#" class="button button--primary">Sign Up</a>
+                </div>
+
                 <div class="scroll-icon">
                     <img src="assets/mouse-icon@2x.png" class="scroll-icon__icon"/>
                     <span class="scroll-icon__text">SCROLL <br> DOWN</span>
                 </div>
             </div>
         </section>
-        <section class="section--fullscreen grid grid--middle section--blue">
+
+        <section class="grid grid--middle section--blue">
             <div class="container container--spaced">
                 <div class="grid grid--center">
-                    <p class="sign-up-text text--sm text--center">Cyber Quest is an integrated training event and hacking competition provided by Signals Intelligence Agency to raise awareness and identify the next generation of Cyber Security Experts. Take part and discover more than you imagine about networking, cyber security and what really happens online. Join the Quest now to draw back the curtain on the 21st century’s digital battleground.</p>
+                    <p class="sign-up-text text--center">Cyber Quest is an integrated training event and hacking competition provided by Signals Intelligence Agency to raise awareness and identify the next generation of Cyber Security Experts. Take part and discover more than you imagine about networking, cyber security and what really happens online. Join the Quest now to draw back the curtain on the 21st century’s digital battleground.</p>
                     <a href="#" class="button button--primary">Apply Now</a>
                 </div>
             </div>
         </section>
-        <section class="section--white section--fullscreen">
+        <section class="section--white">
                 <div class="container container--spaced">
-                    <div class="grid grid--justify grid--nowrap">
-                        <div class="learn-more-block col">
-                            <h2 class="color--main">Cyber Quest is <br> one of a kind</h2>
+                    <div class="grid grid--justify">
+                        <div class="learn-more-block col col--lg-6 col--md-12">
+                            <h2 class="color--main"><strong>Cyber Quest</strong> is one of a kind</h2>
                             <p>Cybersecurity has never been more important for the UAE and the world. From denial of service, to ransomware, to data leaks, Cyber Defenders are needed everywhere – wifi hackers, password crackers, reverse engineers and forward thinkers.</p>
                             <a href="#" class="button button--primary">Learn More</a>                    
                         </div>
-                        <div class="col">
-                            <h6 class="color--main with-prefix with-prefix--main">ACTIVITIES</h6>
+                        <div class="tiles-block col col--lg-6 col--md-12">
+                            <h6 class="color--main with-prefix with-prefix--mobile">ACTIVITIES</h6>
                             <div class="tiles-gutters">
                                 <div class="tiles">
                                     <div class="tile"></div>
@@ -86,13 +89,13 @@
         </section>
         <section class="section--blue grid grid--middle text--center">
             <div class="container container--spaced">
-                <h2 class="text--xl text--center">Don't miss out.</h2>
-                <p class="text--sm text--center">Apply now to secure your place!</p>
+                <h2 class="text--center">Don't miss out.</h2>
+                <p class="text--center">Apply now to secure your place!</p>
                 <a href="#" class="button button--primary">Apply Now</a>    
             </div>
         </section>
         <footer class="footer">
-            <div class="container">
+            <div class="container container--spaced">
                 <div class="grid grid--middle grid--justify">
                     <div class="col">
                         <span class="footer__copyright">Copyright © 2019 Cyber Quest. All rights reserved.</span>

@@ -18,7 +18,7 @@
 }
 
 $setting-font-family: 'Roboto Mono','Arial', sans-serif !default;
-$setting-font-size-base: 16px !default;
+$setting-font-size-base: 20px !default;
 
 $setting-color-body: #fff;
 $setting-color-text: #272727;
@@ -33,16 +33,22 @@ $setting-grid-padding: 40px;
 $setting-grid-gutter: 0 !default;
 $setting-grid-columns: 12 !default;
 $setting-fullscreen-min-height: 600px;
+
+$setting-breakpoint-sm-max: 549px;
+$setting-breakpoint-md-max: 879px;
+$setting-breakpoint-lg-max: 1169px;
+
 $setting-breakpoints: (
-    sm: (0, 549px),
-    md: (550px, 979px),
-    lg: (980px, 1169px),
+    sm: (0, $setting-breakpoint-sm-max),
+    md: (550px, $setting-breakpoint-md-max),
+    lg: (880px, $setting-breakpoint-lg-max),
     xl: (1170px)
 ) !default;
 
+
 $setting-font-size: (
-        1: 60px,
-        2: 50px,
+        1: 3rem,
+        2: 2.5rem,
         3: 30px,
         4: 26px,
         5: 22px,

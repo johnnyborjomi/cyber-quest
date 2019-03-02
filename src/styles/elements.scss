@@ -2,17 +2,7 @@
     position: relative;
 }
 
-.social-links {
-    a {
-        cursor: pointer;
-        width: 20px;
-        height: 25px;
-        margin: 0 23px;
-        &:last-of-type {
-            margin-right: 0;
-        }
-    }
-}
+
 
 .video-bg {
     position: absolute;
@@ -20,6 +10,14 @@
     left: 0;
     bottom: 0;
     right: 0;
+
+    video {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+    }
 }
 
 .button {
@@ -29,15 +27,35 @@
     margin: 24px 0;
     &--primary {
         background: #116ecb;
-        background: linear-gradient(to right, #116ecb 0%,#0c5195 100%);
+        background: linear-gradient(to right, #116ecb 0%, #0c5195 100%);
+        &:hover {
+            background: linear-gradient(to right, #0034c4 0%,#003387 100%);
+        }
+    }
+
+}
+
+.social-links {
+    a {
+        cursor: pointer;
+        width: 20px;
+        height: 25px;
+        margin: 0 23px;
+        &:last-of-type {
+            margin-right: 0;
+        }
+        &:hover {
+            opacity: .5;
+        }
     }
 }
 
 .scroll-icon {
     display: flex;
     align-items: center;
-    margin-top: 100px;
     position: absolute;
+    bottom: -5rem;
+    left: 40px;
     &__icon {
         width: 16px;
         height: 16px;
@@ -49,14 +67,16 @@
 }
 
 .section {
+    &--blue, &--white {
+        color: $setting-color-text;
+        padding: 150px 0;
+        @include helper-breakpoint-media-max($setting-breakpoint-md-max) {
+            padding: 100px 0;
+        }
+    }
     &--blue {
         color: white;
         background: $setting-color-bg;
-        padding: 150px 0;
-    }
-    &--white {
-        color: $setting-color-text;
-        padding: 150px 0;
     }
     &--fullscreen {
         height: 100vh;
@@ -67,6 +87,10 @@
 .tiles-gutters{
     margin-left: -15px;
     margin-right: -15px;
+    @include helper-breakpoint-media-max($setting-breakpoint-lg-max) {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
 }
 
 .tiles {
@@ -74,28 +98,66 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     width: 568px;
+
+    @include helper-breakpoint-media-max($setting-breakpoint-lg-max) {
+        width: 440px;
+        margin: 0 auto;
+    }
+    @include helper-breakpoint-media-max($setting-breakpoint-sm-max) {
+        width: 340px;
+        margin: 0 auto;
+    }
     .tile {
         background: rgba(0,0,0,.05);
         height: 254px;
         width: 254px;
         margin: 15px;
-        min-width: calc(50% - 30px);
+
+        @include helper-breakpoint-media-max($setting-breakpoint-lg-max) {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+        }
+        @include helper-breakpoint-media-max($setting-breakpoint-sm-max) {
+            width: 150px;
+            height: 150px;
+            margin: 10px;
+        }
     }
 }
 
 .sign-up-text {
-    line-height: 35px;
-    padding: 10px 85px
+    line-height: 1.75rem;
+    padding: 10px 85px;
+    @include helper-breakpoint-media-max($setting-breakpoint-sm-max) {
+        padding: 0;
+    }
 }
 
 .learn-more-block {
     padding-right: 50px;
+    margin-bottom: 30px;
+    @include helper-breakpoint-media-max($setting-breakpoint-md-max) {
+        text-align: center;
+        padding-right: 0;
+    }
+    strong {
+        display: block;
+    }
     h2 {
         font-weight: bold;
+
     }
 
     p {
         margin: 38px 0;
+    }
+
+}
+
+.section--white .tiles-block {
+    @include helper-breakpoint-media-max($setting-breakpoint-sm-max) {
+        margin-right: auto !important;
     }
 }
 
