@@ -113,6 +113,7 @@
         &::before {
             width: 20px;
             height: 3px;
+            background: $setting-color-main;
             @include absolute-centred-y-elem();
         }
         &--black {
@@ -131,10 +132,12 @@
             }
         }
         &--mobile {
-            padding-left: 0;
-            text-align: center;
-            &:after {
-                display: none;
+            @include helper-breakpoint-media-max($setting-breakpoint-md-max){
+                padding-left: 0;
+                text-align: center;
+                &:before {
+                    display: none;
+                }
             }
         }
     }
