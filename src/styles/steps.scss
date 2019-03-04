@@ -1,0 +1,74 @@
+.steps-page {
+    h2 {
+        margin: 16px 0;
+    }
+
+    h6 {
+        margin-top: 50px;
+    }
+}
+
+.progress-bar-section {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: $setting-color-bg-1;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+}
+
+.form-field {
+    font-size: 12px;
+    margin-bottom: 40px;
+
+    label {
+        display: block;
+        margin: 13px 0;
+        font-size: 14px;
+    }
+
+    input, select {
+        margin-right: 30px;
+        font-family: Helvetica, Arial, sans-serif;
+        color: rgba(0,0,0,.5);
+    }
+
+    input[type="radio"] {
+        margin-right: 16px;
+        margin-bottom: 14px;
+    }
+
+    input {
+        &::placeholder {
+            color: rgba(0,0,0,.5);
+        }
+        border: 1px solid #ddd;
+        background: #F7F7F7;
+        padding: 13px 11px;
+        max-width: 160px;
+
+    }
+
+    select {
+        -webkit-appearance: none;
+        border-radius: 0;
+        border: 1px solid #ddd;
+        background: #F7F7F7;
+        padding: 13px 11px;
+        width: 100%;
+        max-width: 254px;
+        &.select--narrow {
+            width: auto;
+        }
+
+    }
+    &--half-size {
+        width: 50%;
+    }
+}

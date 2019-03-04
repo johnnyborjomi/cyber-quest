@@ -41,6 +41,10 @@
         }
     }
 
+    h1, h2 {
+        font-weight: bold;
+    }
+
     a {
         color: $setting-color-main;
         text-decoration: none;
@@ -103,6 +107,10 @@
     .color {
         &--main {
             color: $setting-color-main;
+        }
+
+        &--white {
+            color: #fff;
         }
     }
 
