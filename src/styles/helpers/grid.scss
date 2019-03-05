@@ -8,8 +8,8 @@
         margin: auto;
 
         &--fullscreen {
-            height: 100vh;
-            min-height: $setting-fullscreen-min-height;
+            min-height: 100vh;
+            //min-height: $setting-fullscreen-min-height;
             max-width: 100vw;
         }
 

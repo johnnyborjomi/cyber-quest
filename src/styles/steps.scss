@@ -35,7 +35,7 @@
 
     input, select {
         margin-right: 30px;
-        font-family: Helvetica, Arial, sans-serif;
+        font-family: $setting-font-family-1;
         color: rgba(0,0,0,.5);
     }
 
@@ -50,9 +50,17 @@
         }
         border: 1px solid #ddd;
         background: #F7F7F7;
-        padding: 13px 11px;
+        padding: 8px 13px;
         max-width: 160px;
-
+        &.input--narrow {
+            max-width: 65px;
+        }
+        &:invalid {
+            border-color: #d32f2f;
+        }
+        &:valid {
+            border-color: #4caf50;
+        }
     }
 
     select {
@@ -60,7 +68,7 @@
         border-radius: 0;
         border: 1px solid #ddd;
         background: #F7F7F7;
-        padding: 13px 11px;
+        padding: 8px 13px;
         width: 100%;
         max-width: 254px;
         &.select--narrow {
@@ -70,5 +78,36 @@
     }
     &--half-size {
         width: 50%;
+    }
+}
+
+
+.drop-zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $setting-color-gray-1;
+    background: #F7F7F7;
+    width: 100%;
+    max-width: 445px;
+    height: 280px;
+
+    input {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+
+    &__text-sm {
+        font-size: 12px;
+        font-family: $setting-font-family-1;
+        color: rgba(0,0,0,.2);
+
+    }
+    &__text-lg {
+        font-size: 0.8rem;
+        font-family: $setting-font-family-1;
+        color: rgba(0,0,0,.5);
     }
 }

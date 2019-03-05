@@ -25,12 +25,18 @@
     padding: 13px 46px;
     color: #fff;
     margin: 24px 0;
+    cursor: pointer;
     &--primary {
         background: #116ecb;
         background: linear-gradient(to right, #116ecb 0%, #0c5195 100%);
         &:hover {
             background: linear-gradient(to right, #0034c4 0%,#003387 100%);
         }
+    }
+
+    &--sm {
+        padding: 9px 11px;
+        font-size: 12px;
     }
 
 }

@@ -32,7 +32,7 @@ const config = {
   plugins: [
     new ExtractTextPlugin("styles.css"),
     new HtmlWebpackPlugin({template: "./src/index.html"}),
-    new HtmlWebpackPlugin({filename: 'step-1.html', template: "./src/step-1.html" }),
+    new HtmlWebpackPlugin({filename: 'steps.html', template: "./src/steps.html" }),
     new CopyWebpackPlugin([{ from: "src/styles/assets/", to: "assets" }])
   ]
 };
