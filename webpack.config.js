@@ -3,6 +3,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const sassLoader = require('sass-loader');
+const webpack = require('webpack');
 
 const config = {
   entry: "./src/index.js",
@@ -18,8 +19,10 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
-        use: ExtractTextPlugin.extract(["css-loader", "sass-loader"]),
+        test: /\.s?css$/,
+        use: ExtractTextPlugin.extract({
+            fallback: "style-loader",
+            use: ["css-loader", "sass-loader"]}),
       }
       // { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
     ],
@@ -29,12 +32,18 @@ const config = {
   resolve: {
     extensions: [".js", ".json"],
   },
+
   plugins: [
-    new ExtractTextPlugin("styles.css"),
-    new HtmlWebpackPlugin({template: "./src/index.html"}),
-    new HtmlWebpackPlugin({filename: 'steps.html', template: "./src/steps.html" }),
-    new CopyWebpackPlugin([{ from: "src/styles/assets/", to: "assets" }])
+      new ExtractTextPlugin("styles.css"),
+      new HtmlWebpackPlugin({template: "./src/index.html"}),
+      new HtmlWebpackPlugin({filename: 'steps.html', template: "./src/steps.html" }),
+      new CopyWebpackPlugin([{ from: "src/styles/assets/", to: "assets" }]),
+      new webpack.ProvidePlugin({
+          $: 'jquery',
+          jQuery: 'jquery'
+      })
   ]
 };
+
 
 module.exports = config;
