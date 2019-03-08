@@ -239,9 +239,12 @@ html {
   @media only screen and (max-width: 1169px) {
     html {
       font-size: 16px; } }
-  @media only screen and (max-width: 549px) {
+  @media only screen and (max-width: 879px) {
     html {
       font-size: 14px; } }
+  @media only screen and (max-width: 549px) {
+    html {
+      font-size: 12px; } }
 
 body {
   font-size: 20px;
@@ -321,7 +324,7 @@ blockquote {
   font-size: 1rem; }
 
 .text--sm {
-  font-size: 20px; }
+  font-size: 1rem; }
 
 .text--md {
   font-size: 24px; }
@@ -640,6 +643,24 @@ blockquote {
   .button--sm {
     padding: 9px 11px;
     font-size: 12px; }
+  .button--next::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border: 4px solid transparent;
+    border-left: 8px solid white;
+    margin-right: -4px;
+    margin-left: 6px; }
+  .button--back::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border: 4px solid transparent;
+    border-right: 8px solid white;
+    margin-right: 6px;
+    margin-left: -4px; }
 
 .social-links a {
   cursor: pointer;
@@ -756,6 +777,31 @@ blockquote {
   .section--white .container .tiles-block {
     margin-right: auto; } }
 
+.success-text__icon {
+  margin: 50px; }
+
+.success-text__text {
+  max-width: 780px;
+  margin: 20px auto; }
+  .success-text__text--sm {
+    font-size: 14px;
+    margin: 30px 20px 50px; }
+
+[data-featherlight] {
+  cursor: pointer; }
+
+.featherlight iframe {
+  width: 1080px;
+  height: 730px; }
+  @media only screen and (max-width: 1169px) {
+    .featherlight iframe {
+      width: 510px;
+      height: 360px; } }
+  @media only screen and (max-width: 549px) {
+    .featherlight iframe {
+      width: 300px;
+      height: 220px; } }
+
 .header {
   z-index: 10;
   position: absolute;
@@ -787,14 +833,14 @@ blockquote {
   .jumbotron__content {
     position: relative;
     z-index: 10; }
-    .jumbotron__content h1 {
-      margin: 30px 0;
-      font-weight: bold;
-      max-width: 40%; }
-      @media only screen and (max-width: 879px) {
-        .jumbotron__content h1 {
-          text-align: center;
-          max-width: 100%; } }
+  .jumbotron__title h1 {
+    margin: 30px 0;
+    font-weight: bold;
+    max-width: 40%; }
+    @media only screen and (max-width: 879px) {
+      .jumbotron__title h1 {
+        text-align: center;
+        max-width: 100%; } }
   .jumbotron__video {
     text-align: right;
     position: absolute;
@@ -803,9 +849,10 @@ blockquote {
     transform: translate(0, -50%); }
     @media only screen and (max-width: 879px) {
       .jumbotron__video {
-        position: static;
+        position: relative;
         transform: unset;
-        text-align: center; } }
+        text-align: center;
+        left: 0; } }
     .jumbotron__video iframe {
       width: 540px;
       height: 365px; }
@@ -817,6 +864,13 @@ blockquote {
         .jumbotron__video iframe {
           width: 280px;
           height: 190px; } }
+  .jumbotron__video-trigger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 20; }
   @media only screen and (max-width: 879px) {
     .jumbotron__date {
       display: none; } }
@@ -869,7 +923,48 @@ blockquote {
   .progress-bar-section__container {
     display: flex;
     align-items: center;
-    justify-content: space-between; }
+    flex-wrap: wrap;
+    height: 78px;
+    position: relative;
+    padding: 16px 0; }
+  .progress-bar-section__actions {
+    position: absolute;
+    right: 0; }
+  .progress-bar-section__text {
+    margin-right: 30px; }
+    @media only screen and (max-width: 549px) {
+      .progress-bar-section__text {
+        width: 100%; } }
+
+.progress-bar {
+  height: 12px;
+  max-width: 445px;
+  width: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden; }
+  @media only screen and (max-width: 549px) {
+    .progress-bar {
+      height: 7px; } }
+  .progress-bar__progress {
+    position: absolute;
+    height: 12px;
+    width: 100%;
+    top: 0;
+    left: -100%;
+    background: #0C5195;
+    transition: left .8s ease-in-out; }
+
+.help {
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 50%;
+  color: black;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center; }
 
 .form-field {
   font-size: 12px;
@@ -894,10 +989,10 @@ blockquote {
       color: rgba(0, 0, 0, 0.5); }
     .form-field input.input--narrow {
       max-width: 65px; }
-    .form-field input:invalid {
-      border-color: #d32f2f; }
-    .form-field input:valid {
-      border-color: #4caf50; }
+  form.submitted .form-field input:invalid {
+    border-color: #d32f2f; }
+  form.submitted .form-field input:valid {
+    border-color: #4caf50; }
   .form-field select {
     -webkit-appearance: none;
     border-radius: 0;
