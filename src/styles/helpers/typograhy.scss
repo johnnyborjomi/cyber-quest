@@ -18,9 +18,13 @@
         @include helper-breakpoint-media-max($setting-breakpoint-lg-max){
             font-size: 16px;
         }
-        @include helper-breakpoint-media-max($setting-breakpoint-sm-max){
+        @include helper-breakpoint-media-max($setting-breakpoint-md-max){
             font-size: 14px;
         }
+        @include helper-breakpoint-media-max($setting-breakpoint-sm-max){
+            font-size: 12px;
+        }
+
     }
 
     body {
@@ -88,7 +92,7 @@
 
     .text {
         &--sm {
-            font-size: 20px;
+            font-size: 1rem;
         }
 
         &--md {

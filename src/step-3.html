@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Step 3</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+<body>
+<div class="wrapper steps-page">
+    <header class="header">
+        <div class="container container--spaced header__container">
+            <a href="index.html" class="header__logo">
+                <img src="assets/logo-black-2x.png" alt="Cyber Quest" title="Cyber Quest">
+            </a>
+
+            <div class="header__links social-links">
+                <div class="grid">
+                    <a href="https://www.facebook.com"><img src="assets/facebook.svg" alt="Facebook"></a>
+                    <a href="https://www.twitter.com"><img src="assets/twitter.svg" alt="Twitter"></a>
+                    <a href="https://www.instagram.com"><img src="assets/instagram.svg" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="container container--fullscreen section--white clearfix">
+
+        <div class="container container--spaced">
+            <h6 class="color--main with-prefix with-prefix--mobile">
+                STUDENT REGISTRATION
+            </h6>
+
+
+            <div class="form-container">
+                <form id="form" action="success-page.html" enctype="multipart/form-data" method="get">
+                    <div class="">
+
+                        <!--step 3-->
+
+                        <div class="step-3 grid">
+                            <h2 class="col--sm-12 color--main">Identification</h2>
+                            <div class="col--sm-12 grid grid--middle">
+                                <div class="col col--lg-6 col--md-12">
+                                    <label for="emirate-id" class="drop-zone">
+                                        <input type="file" id="emirate-id" multiple />
+                                        <span class="drop-zone__text-lg">Please upload your Emirates ID</span>
+                                        <span class="button button--primary button--sm">Select</span>
+                                        <span class="drop-zone__text-sm">…or drag & drop it here</span>
+                                    </label>
+
+                                </div>
+                                <div class="col col--lg-6 col--md-12">
+                                    <div class="g-recaptcha" data-sitekey="https://johnnyborjomi.github.io/cyber-quest/dist/step-1.html"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </section>
+    <div class="progress-bar-section">
+        <div class="container container--spaced">
+            <div class="progress-bar-section__container">
+                <span class="progress-bar-section__text text--sm color--white">Step 3</span>
+                <div class="progress-bar js-step-3" data-progress="100"><div class="progress-bar__progress js-progress-line"></div></div>
+
+                <div class="progress-bar-section__actions">
+                    <a href="step-2.html" class="button button--primary button--back button--sm">Back</a>
+                    <input class="button button--primary button--sm" value="Submit" type="submit" form="form"/>
+                    <a href="#" class="help">?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

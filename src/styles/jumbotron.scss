@@ -7,7 +7,9 @@
     &__content {
         position: relative;
         z-index: 10;
+    }
 
+    &__title {
         h1 {
             margin: 30px 0;
             font-weight: bold;
@@ -17,8 +19,8 @@
                 max-width: 100%;
             }
         }
-
     }
+
     &__video {
         text-align: right;
         position: absolute;
@@ -26,9 +28,10 @@
         top: 50%;
         transform: translate(0, -50%);
         @include helper-breakpoint-media-max($setting-breakpoint-md-max) {
-            position: static;
+            position: relative;
             transform: unset;
             text-align: center;
+            left: 0;
         }
 
         iframe {
@@ -43,6 +46,15 @@
                 height: 190px;
             }
         }
+    }
+
+    &__video-trigger {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 20;
     }
 
     &__date {

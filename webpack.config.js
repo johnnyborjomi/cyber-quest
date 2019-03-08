@@ -36,7 +36,10 @@ const config = {
   plugins: [
       new ExtractTextPlugin("styles.css"),
       new HtmlWebpackPlugin({template: "./src/index.html"}),
-      new HtmlWebpackPlugin({filename: 'steps.html', template: "./src/steps.html" }),
+      new HtmlWebpackPlugin({filename: 'step-1.html', template: "./src/step-1.html" }),
+      new HtmlWebpackPlugin({filename: 'step-2.html', template: "./src/step-2.html" }),
+      new HtmlWebpackPlugin({filename: 'step-3.html', template: "./src/step-3.html" }),
+      new HtmlWebpackPlugin({filename: 'success-page.html', template: "./src/success-page.html" }),
       new CopyWebpackPlugin([{ from: "src/styles/assets/", to: "assets" }]),
       new webpack.ProvidePlugin({
           $: 'jquery',

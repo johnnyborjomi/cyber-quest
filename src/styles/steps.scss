@@ -18,10 +18,60 @@
     &__container {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        height: 78px;
+        position: relative;
+        padding: 16px 0;
+    }
+
+    &__actions {
+        position: absolute;
+        right: 0;
+    }
+
+    &__text {
+        margin-right: 30px;
+        @include helper-breakpoint-media-max($setting-breakpoint-sm-max) {
+            width: 100%;
+        }
     }
 
 }
+
+.progress-bar {
+    height: 12px;
+    max-width: 445px;
+    width: 50%;
+    background: rgba(255,255,255,.2);
+    position: relative;
+    overflow: hidden;
+    @include helper-breakpoint-media-max($setting-breakpoint-sm-max) {
+        height: 7px;
+    }
+
+    &__progress {
+        position: absolute;
+        height: 12px;
+        width: 100%;
+        top: 0;
+        left: -100%;
+        background: #0C5195;
+        transition: left .8s ease-in-out;
+    }
+}
+
+.help {
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50%;
+    color: black;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+}
+
 
 .form-field {
     font-size: 12px;
@@ -55,6 +105,10 @@
         &.input--narrow {
             max-width: 65px;
         }
+
+    }
+
+    form.submitted & input {
         &:invalid {
             border-color: #d32f2f;
         }
@@ -111,3 +165,5 @@
         color: rgba(0,0,0,.5);
     }
 }
+
+
