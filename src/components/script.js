@@ -26,10 +26,10 @@ document.addEventListener('DOMContentLoaded', function () {
     if(document.querySelector('select')){
         $(document).ready(function() {
             if(window.innerWidth > 550){
-                // customSelects.select2({
-                //     'width': 'resolve',
-                //     minimumResultsForSearch: Infinity
-                // });
+                customSelects.select2({
+                    'width': 'resolve',
+                    minimumResultsForSearch: Infinity
+                });
             }
 
             window.addEventListener('touchstart', function onFirstTouch() {
