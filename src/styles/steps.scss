@@ -1,6 +1,9 @@
 .steps-page {
     h2 {
         margin: 16px 0;
+        @include helper-breakpoint-media-max($setting-breakpoint-md-max) {
+            text-align: center;
+        }
     }
 
     h6 {
@@ -70,12 +73,23 @@
     font-size: 12px;
     line-height: 16px;
     text-align: center;
+    @include helper-breakpoint-media-max($setting-breakpoint-sm-max) {
+        display: none;
+    }
+
 }
 
 
 .form-field {
     font-size: 12px;
-    margin-bottom: 40px;
+    padding: 30px;
+    @include helper-breakpoint-media-max($setting-breakpoint-lg-max) {
+        padding: 15px;
+    }
+
+    @include helper-breakpoint-media-max($setting-breakpoint-sm-max) {
+        padding: 5px 15px;
+    }
 
     label {
         display: block;
@@ -83,15 +97,34 @@
         font-size: 14px;
     }
 
-    input, select {
+    input, select, .select2-container {
         margin-right: 30px;
+        margin-bottom: 5px;
         font-family: $setting-font-family-1;
         color: rgba(0,0,0,.5);
+        @include helper-breakpoint-media-max($setting-breakpoint-lg-max) {
+            margin-right: 20px;
+        }
+
+    }
+
+    input:last-of-type,
+    select:last-of-type,
+    .select2-container:last-of-type
+    {
+        margin-right: 0;
     }
 
     input[type="radio"] {
         margin-right: 16px;
         margin-bottom: 14px;
+        width: auto;
+    }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
     }
 
     input {
@@ -102,10 +135,16 @@
         background: #F7F7F7;
         padding: 8px 13px;
         max-width: 160px;
+        width: 100%;
         &.input--narrow {
             max-width: 65px;
         }
-
+        &.input--lg {
+            max-width: 250px;
+        }
+        &.input--expand {
+            max-width: 100%;
+        }
     }
 
     form.submitted & input {
@@ -117,26 +156,54 @@
         }
     }
 
-    select {
+    select, .select2-selection {
         -webkit-appearance: none;
         border-radius: 0;
         border: 1px solid #ddd;
         background: #F7F7F7;
         padding: 8px 13px;
         width: 100%;
-        max-width: 254px;
+
         &.select--narrow {
             width: auto;
+            min-width: 80px;
+            margin-right: 1.5rem;
+
         }
 
     }
     &--half-size {
         width: 50%;
+        @include helper-breakpoint-media-max($setting-breakpoint-sm-max) {
+            width: 100%;
+        }
+    }
+
+
+}
+
+.input-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    @include helper-breakpoint-media-max($setting-breakpoint-sm-max) {
+        flex-wrap: wrap;
+    }
+
+    &--no-wrap {
+        @include helper-breakpoint-media-max($setting-breakpoint-sm-max) {
+            flex-wrap: nowrap;
+        }
+    }
+    .input--expand {
+        @include helper-breakpoint-media-max($setting-breakpoint-sm-max) {
+            margin-right: 0;
+        }
     }
 }
 
 
-.drop-zone {
+.form-field .drop-zone {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -166,4 +233,46 @@
     }
 }
 
+
+//select2 reset
+
+.select2-container {
+    vertical-align: bottom;
+    .select2-selection {
+        height: unset;
+
+        &--single {
+            height: unset;
+            padding-right: 26px;
+
+            .select2-selection__rendered {
+                padding: unset;
+                line-height: unset;
+                color: rgba(0,0,0,.5);
+
+            }
+
+            .select2-selection__arrow {
+                height: 100%;
+            }
+        }
+
+
+    }
+}
+
+.select2-container--default {
+    .select2-results__option{
+        &--highlighted[aria-selected] {
+            background: $setting-color-gray-1;
+        }
+    }
+
+}
+
+.select2-container--open .select2-dropdown {
+    font-size: 12px;
+    border-radius: 0;
+    border: 1px solid $setting-color-gray-1;
+}
 

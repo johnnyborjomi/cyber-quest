@@ -45,13 +45,15 @@
 
                         <div class="step-2">
                             <h2 class="color--main">Personal Details</h2>
-                            <div class="grid">
-                                <div class="col col--lg-6 col--md-12">
+                            <div class="grid grid--with-gutters-30">
+                                <div class="col col--lg-6 col--md-12 col--sm-12">
                                     <div class="form-field">
                                         <label for="first-name">Guardian Name</label>
-                                        <input type="text" id="first-name" placeholder="First Name" minlength="2" pattern="^[a-zA-Z]+$" required>
-                                        <input type="text" id="second-name" placeholder="Second Name" minlength="2" pattern="^[a-zA-Z]+$" required>
-                                        <input type="text" id="last-name" placeholder="Last Name" minlength="2" pattern="^[a-zA-Z]+$" required>
+                                        <div class="input-grid">
+                                            <input class="input--expand" type="text" id="first-name" placeholder="First Name" minlength="2" pattern="^[a-zA-Z]+$" required>
+                                            <input class="input--expand" type="text" id="second-name" placeholder="Second Name" minlength="2" pattern="^[a-zA-Z]+$" required>
+                                            <input class="input--expand" type="text" id="last-name" placeholder="Last Name" minlength="2" pattern="^[a-zA-Z]+$" required>
+                                        </div>
                                     </div>
                                     <div class="form-field">
                                         <label for="relationship">Relationship with Guardian</label>
@@ -67,14 +69,16 @@
                                     </div>
                                     <div class="form-field">
                                         <label for="phone">Guardian Phone Number</label>
-                                        <select name="tel-code" id="tel-code" class="select--narrow" required>
-                                            <option disabled selected>000</option>
-                                            <option value="0097">0097</option>
-                                        </select>
-                                        <input type="tel" id="phone" placeholder="000 0000" pattern="2[0-9]{3}-[0-9]{3}" required>
+                                        <div class="input-grid input-grid--no-wrap">
+                                            <select name="tel-code" id="tel-code" class="select--narrow" required>
+                                                <option disabled selected>000</option>
+                                                <option value="0097">0097</option>
+                                            </select>
+                                            <input class="input--expand" type="tel" id="phone" placeholder="000 0000" pattern="2[0-9]{3}-[0-9]{3}" required>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col col--lg-6 col--md-12">
+                                <div class="col col--lg-6 col--md-12 col--sm-12">
                                     <div class="grid">
                                         <div class="form-field form-field--half-size">
                                             <label for="emirate">Select your Emirate</label>

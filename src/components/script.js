@@ -13,10 +13,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const progressBar = document.querySelector('.progress-bar');
     const progressLine = document.querySelector('.js-progress-line');
-    const progress = progressBar.dataset.progress;
+    if(progressBar){
+        const progress = progressBar.dataset.progress;
 
-    setTimeout(()=>{
-        progressLine.style.left = progress - 100 + '%';
-    },200)
+        setTimeout(()=>{
+            progressLine.style.left = progress - 100 + '%';
+        },200)
+    }
 
+    const customSelects = $('select');
+
+    if(document.querySelector('select')){
+        $(document).ready(function() {
+            if(window.innerWidth > 550){
+                // customSelects.select2({
+                //     'width': 'resolve',
+                //     minimumResultsForSearch: Infinity
+                // });
+            }
+
+            window.addEventListener('touchstart', function onFirstTouch() {
+                customSelects.select('destroy');
+            });
+        });
+    }
 });
